@@ -66,10 +66,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>%(ForcedIncludeFiles)</ForcedIncludeFiles>
-      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\HTSensor;F:\arduino-1.8.5-windows\libraries\DHTlib;F:\arduino-1.8.5-windows\libraries;C:\Users\RavianXReaver\Documents\Arduino\libraries;F:\arduino-1.8.5-windows\hardware\arduino\avr\libraries;F:\arduino-1.8.5-windows\hardware\arduino\avr\cores\arduino;F:\arduino-1.8.5-windows\hardware\arduino\avr\variants\mega;F:\arduino-1.8.5-windows\hardware\tools\avr\avr\include;F:\arduino-1.8.5-windows\hardware\tools\avr\avr\include\avr;F:\arduino-1.8.5-windows\hardware\tools\avr\lib\gcc\avr\4.8.1\include;F:\arduino-1.8.5-windows\hardware\tools\avr\lib\gcc\avr\4.9.2\include;F:\arduino-1.8.5-windows\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.HTSensor.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>__AVR_ATmega2560__;F_CPU=16000000L;ARDUINO=10805;ARDUINO_AVR_MEGA2560;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

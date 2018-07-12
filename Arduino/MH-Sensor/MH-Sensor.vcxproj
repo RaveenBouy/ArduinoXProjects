@@ -12,28 +12,39 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C5F80730-F44F-4478-BDAE-6634EFC2CA88}</ProjectGuid>
-    <RootNamespace>Arduino</RootNamespace>
-    <ProjectName>Arduino</ProjectName>
+    <RootNamespace>MH_Sensor</RootNamespace>
+    <ProjectName>MH-Sensor</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>
+    </PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>
+    </PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>
+    </PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>
+    </PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -66,10 +77,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\Arduino;F:\arduino-1.8.5-windows\libraries;C:\Users\RavianXReaver\Documents\Arduino\libraries;F:\arduino-1.8.5-windows\hardware\arduino\avr\libraries;F:\arduino-1.8.5-windows\hardware\arduino\avr\cores\arduino;F:\arduino-1.8.5-windows\hardware\arduino\avr\variants\mega;F:\arduino-1.8.5-windows\hardware\tools\avr\avr\include;F:\arduino-1.8.5-windows\hardware\tools\avr\avr\include\avr;F:\arduino-1.8.5-windows\hardware\tools\avr\lib\gcc\avr\4.8.1\include;F:\arduino-1.8.5-windows\hardware\tools\avr\lib\gcc\avr\4.9.2\include;F:\arduino-1.8.5-windows\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>$(ProjectDir)__vm\.Arduino.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\MH-Sensor;F:\arduino-1.8.5-windows\libraries;C:\Users\RavianXReaver\Documents\Arduino\libraries;F:\arduino-1.8.5-windows\hardware\arduino\avr\libraries;F:\arduino-1.8.5-windows\hardware\arduino\avr\cores\arduino;F:\arduino-1.8.5-windows\hardware\arduino\avr\variants\mega;F:\arduino-1.8.5-windows\hardware\tools\avr\avr\include;F:\arduino-1.8.5-windows\hardware\tools\avr\avr\include\avr;F:\arduino-1.8.5-windows\hardware\tools\avr\lib\gcc\avr\4.8.1\include;F:\arduino-1.8.5-windows\hardware\tools\avr\lib\gcc\avr\4.9.2\include;F:\arduino-1.8.5-windows\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.MH-Sensor.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
-      <PreprocessorDefinitions>__AVR_ATmega2560__;F_CPU=16000000L;ARDUINO=10805;ARDUINO_AVR_MEGA2560;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__AVR_ATmega2560__;_VMDEBUG=1;F_CPU=16000000L;ARDUINO=10805;ARDUINO_AVR_MEGA2560;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -78,10 +89,14 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
+      <Optimization>Disabled</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\MH-Sensor;F:\arduino-1.8.5-windows\libraries;C:\Users\RavianXReaver\Documents\Arduino\libraries;F:\arduino-1.8.5-windows\hardware\arduino\avr\libraries;F:\arduino-1.8.5-windows\hardware\arduino\avr\cores\arduino;F:\arduino-1.8.5-windows\hardware\arduino\avr\variants\mega;F:\arduino-1.8.5-windows\hardware\tools\avr\avr\include;F:\arduino-1.8.5-windows\hardware\tools\avr\avr\include\avr;F:\arduino-1.8.5-windows\hardware\tools\avr\lib\gcc\avr\4.8.1\include;F:\arduino-1.8.5-windows\hardware\tools\avr\lib\gcc\avr\4.9.2\include;F:\arduino-1.8.5-windows\hardware\tools\avr\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ProjectDir)__vm\.MH-Sensor.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>__AVR_ATmega2560__;F_CPU=16000000L;ARDUINO=10805;ARDUINO_AVR_MEGA2560;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -96,7 +111,12 @@
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
-    <ClInclude Include="__vm\.Arduino.vsarduino.h" />
+    <None Include="MH-Sensor.ino">
+      <FileType>CppCode</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.MH-Sensor.vsarduino.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

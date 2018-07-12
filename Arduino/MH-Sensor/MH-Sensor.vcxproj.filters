@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="__vm\.Arduino.vsarduino.h">
+    <None Include="MH-Sensor.ino" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.MH-Sensor.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
