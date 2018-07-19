@@ -3,7 +3,6 @@
  Created:	7/14/2018 11:13:39 PM
  Author:	RavianXReaver
 */
-
 #include "IRremote/IRremote.h"
 
 #define RECV_PIN  2
@@ -19,7 +18,6 @@ void setup()
   irrecv.enableIRIn();
   delay(500);
 }
-
 
 void loop() 
 {

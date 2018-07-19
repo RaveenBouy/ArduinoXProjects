@@ -23,7 +23,7 @@ void loop()
   if (irrecv.decode(&results))
   {
         Serial.println(results.value, HEX);
+		delay(500);
         irrecv.resume();
   }
-  delay(400);
 }

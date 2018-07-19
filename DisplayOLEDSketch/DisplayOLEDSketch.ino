@@ -327,7 +327,6 @@ void drawSS2(String text)
 void setup() 
 {
 	Serial.begin(9600);
-	//OLED.setRot180();
 	pinMode(buzzPin, OUTPUT);
 	pinMode(trigPin, OUTPUT);
 	pinMode(echoPin, INPUT);
