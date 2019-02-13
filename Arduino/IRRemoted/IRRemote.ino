@@ -6,24 +6,28 @@
 
 #include "IRremote/IRremote.h"
 
-const int RECV_PIN = 2;
-IRrecv irrecv(RECV_PIN);
+const int RECV_PIN = 11;
+IRsend irSend;
 decode_results results;
+IRrecv irrecv(RECV_PIN);
 
 void setup() 
 {
-  Serial.begin(9600);
-  irrecv.enableIRIn();
-  irrecv.blink13(true);
+	Serial.begin(9600);
+	irrecv.enableIRIn(); // Start the receiver
 }
 
 
 void loop() 
 {
-  if (irrecv.decode(&results))
-  {
-        Serial.println(results.value, HEX);
-		delay(500);
-        irrecv.resume();
-  }
+	if (irrecv.decode(&results)) 
+	{
+		for(int i = 0; i <3; i++)
+		{
+			irSend.sendPanasonic(0x00707030CF, 32);
+			Serial.println("Sent");
+			delay(40);
+		}
+		irrecv.resume(); // Receive the next value
+	}
 }

@@ -11,6 +11,8 @@
 #define MidButtonPin 17
 
 U8GLIB_SH1106_128X64 OLED(5, 4, 3, 2);
+int x = 0;
+int y = 0;
 
 void setup() 
 {
@@ -26,9 +28,6 @@ void Draw(int x, int y)
 	OLED.setPrintPos(60, 20);
 	OLED.print(y);
 }
-
-int x = 0;
-int y = 0;
 
 void loop() 
 {
