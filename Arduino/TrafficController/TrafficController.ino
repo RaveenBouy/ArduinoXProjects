@@ -242,7 +242,7 @@ void Algorithm()
 
 	if (cycles>0)
 	{
-		if (timerMain == 15 || timerMain == 30)
+		if (timerMain == 1 || timerMain == 15 || timerMain == 30)
 		{
 			Serial.print("previouslane: ");
 			Serial.print(previouslane);
@@ -250,65 +250,74 @@ void Algorithm()
 
 			if (previouslane == 2)
 			{
-				if (sensor1 && sensor2)
+				if (timerMain == 1)
 				{
-					lane1timer = 30;
-				}
-				else
-				{
-					lane1timer = 15;
-				}
-
-				previouslane = 1;
-
-				if (lane1timer == 15)
-				{
-					Lane1Lights(1);
-					Lane2Lights(2);
-
-					if (timerMain == 15)
+					if (sensor1 && sensor2)
 					{
-						ResetTimerMain();
-						return;
+						Lane1Lights(1);
+						Lane2Lights(2);
+						lane1timer = 30;
+					}
+					else
+					{
+						Lane1Lights(1);
+						Lane2Lights(2);
+						lane1timer = 15;
 					}
 				}
 
-				if (lane1timer == 30)
+				if (timerMain == 15)
 				{
-					ResetTimerMain();
-					Lane1Lights(1);
-					Lane2Lights(2);
+					if (lane1timer == 15)
+					{
+						previouslane = 1;
+						ResetTimerMain();
+					}
+				}
+
+				if (timerMain == 30)
+				{
+					if (lane1timer == 30)
+					{
+						previouslane = 1;
+						ResetTimerMain();
+					}
 				}
 			}
 			else
 			{
-				if (sensor3 && sensor4)
+				if (timerMain == 1)
 				{
-					lane2timer = 30;
-				}
-				else
-				{
-					lane2timer = 15;
-				}
-				previouslane = 2;
-
-				if (lane2timer == 15)
-				{
-					Lane1Lights(2);
-					Lane2Lights(1);
-
-					if (timerMain == 15)
+					if (sensor3 && sensor4)
 					{
-						ResetTimerMain();
-						return;
+						Lane1Lights(2);
+						Lane2Lights(1);
+						lane2timer = 30;
+					}
+					else
+					{
+						Lane1Lights(2);
+						Lane2Lights(1);
+						lane2timer = 15;
 					}
 				}
 
-				if (lane2timer == 30)
+				if (timerMain == 15)
 				{
-					ResetTimerMain();
-					Lane1Lights(2);
-					Lane2Lights(1);
+					if (lane2timer == 15)
+					{
+						previouslane = 2;
+						ResetTimerMain();
+					}
+				}
+
+				if (timerMain == 30)
+				{
+					if (lane2timer == 30)
+					{
+						previouslane = 2;
+						ResetTimerMain();
+					}
 				}
 			}
 		}
